@@ -1,0 +1,19 @@
+{
+  "name": "mickaelouthier-ocr-p3",
+  "version": "1.0.0",
+  "description": "Projet 3 de la formation developpeur Web d'OCR. Ohmyfood!",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moDevsome/mickaelouthier-ocr-p3.git"
+  },
+  "author": "Mickael Outhier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moDevsome/mickaelouthier-ocr-p3/issues"
+  },
+  "homepage": "https://modevsome.github.io/mickaelouthier-ocr-p3/"
+}
