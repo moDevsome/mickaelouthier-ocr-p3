@@ -1,0 +1,16 @@
+body {
+  font-family: "Roboto", arial, sans-serif;
+}
+
+h1.restaurant_title {
+  font-family: "Shrikhand", arial, sans-serif;
+}
+
+footer {
+  width: 100%;
+}
+footer > div.footer-inner {
+  width: 90%;
+}
+
+/*# sourceMappingURL=style.css.map */

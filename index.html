@@ -12,5 +12,130 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
+        <header>
+            <a title="Accueil OhMyFood" href="index.html">
+                <!-- Reminder for dev : replace "Paris" with the name of the current town -->
+                <img alt="Reservez en ligne dans une restaurant gastronomique sur Paris" src="images/logo-ohmyfood.svg"/>
+            </a>
+        </header>
+        <main>
+            <form method="post" action="#">
+                <div id="location-field" class="form-field">
+                    <span>
+                        <i class="fa fa-location"></i>
+                    </span>
+                    <input name="location" placeholder="Paris, Belleville"/>
+                </div>
+            </form>
+            <div id="home-explore-block">
+                <h1 class="home-explore-block__h1">Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button>Explorer nos restaurants</button>
+            </div>
+            <section id="home-howto-section">
+                <h2>Fonctionnement</h2>
+                <div>
+                    <span class="home-howto-number">1</span>
+                    <span class="home-howto-ico">
+                        <i class="fa fa-phone"></i>
+                    </span>
+                    <span class="home-howto-text">
+                        Choisissez votre restaurant
+                    </span>
+                </div>
+                <div>
+                    <span class="home-howto-number">2</span>
+                    <span class="home-howto-ico">
+                        <i class="fa fa-divst"></i>
+                    </span>
+                    <span class="home-howto-text">
+                        Composez votre menu
+                    </span>
+                </div>
+                <div>
+                    <span class="home-howto-number">3</span>
+                    <span class="home-howto-ico">
+                        <i class="fa fa-gift"></i>
+                    </span>
+                    <span class="home-howto-text">
+                        Dégustez au restaurant
+                    </span>
+                </div>
+            </section>
+            <section id="home-restaurants-section">
+                <h2>Restaurants</h2>
+                <div class="home-restaurants-section__item">
+                    <span class="home-restaurants-new">Nouveau</span>
+                    <img alt="La palette du goût" src="images/restaurants/palette-du-gout.jpg">
+                    <div class="home-restaurants-section__item__info">
+                        <div>
+                            <span><b>La palette du goût</b></span>
+                            <span>Ménilmontant</span>
+                        </div>
+                        <button class="home-restaurants-block__item__like">
+                            <i class="fa fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="home-restaurants-section__item">
+                    <span class="home-restaurants-new">Nouveau</span>
+                    <img alt="La note enchantée" src="images/restaurants/la-note-enchantee.jpg">
+                    <div class="home-restaurants-section__item__info">
+                        <div>
+                            <span><b>La note enchantée</b></span>
+                            <span>Charonne</span>
+                        </div>
+                        <button class="home-restaurants-block__item__like">
+                            <i class="fa fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="home-restaurants-section__item">
+                    <img alt="À la française" src="images/restaurants/a-la-francaise.jpg">
+                    <div class="home-restaurants-section__item__info">
+                        <div>
+                            <span><b>À la française</b></span>
+                            <span>Cité Rouge</span>
+                        </div>
+                        <button class="home-restaurants-block__item__like">
+                            <i class="fa fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="home-restaurants-section__item">
+                    <span class="home-restaurants-new">Nouveau</span>
+                    <img alt="La délice des sens" src="images/restaurants/le-delice-des-sens.jpg"/>
+                    <div class="home-restaurants-section__item__info">
+                        <div>
+                            <span><b>La délice des sens</b></span>
+                            <span>Folie-Méricourt</span>
+                        </div>
+                        <button class="home-restaurants-block__item__like">
+                            <i class="fa fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-inner">
+                <img alt="logo OhMyFood" src="images/logo-ohmyfood.svg"/>
+                <ul>
+                    <li>
+                        <a title="Proposer un restaurant" href="#"><i class="fa fa-fork"></i> Proposer un restaurant</a>
+                    </li>
+                    <li>
+                        <a title="Devenir partenaire" href="#"><i class="fa fa-hand"></i> Devenir partenaire</a>
+                    </li>
+
+                    <li>
+                        <a title="Mentions légales OhMyFood" href="#">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a title="Contacter OhMyFood" href="mailto:hello@openclassroom-ohmyfood.com">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
