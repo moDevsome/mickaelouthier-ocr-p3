@@ -15,12 +15,12 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 input, textarea {
     resize: none;
@@ -29,17 +29,17 @@ input, textarea {
 
 header, main, footer {
     width: 100%;
-	max-width: 100%;
+    max-width: 100%;
 }
 
 body {
     font-family: "Roboto", arial, sans-serif;
-	font-size: 1em;
+    font-size: 1em;
 }
 
 section > h2 {
-	width: 90%;
-	margin: 0 auto;
-	font-size: 1.5em;
-	font-weight: 700;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-weight: 700;
 }
