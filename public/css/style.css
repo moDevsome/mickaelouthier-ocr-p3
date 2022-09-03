@@ -88,8 +88,10 @@ div#location__field {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
+  gap: 4%;
 }
 div#location__field > input[name=location], div#location__field > span {
   position: relative;
@@ -100,9 +102,12 @@ div#location__field > input[name=location] {
   border: medium none;
   background-color: transparent;
   text-align: center;
+}
+div#location__field > input[name=location] + span {
+  transition: color 100ms;
   /** location field back curtain */
 }
-div#location__field > input[name=location] ~ canvas {
+div#location__field > input[name=location] + span ~ canvas {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -111,34 +116,32 @@ div#location__field > input[name=location] ~ canvas {
   transition: transform 400ms, opacity 380ms;
   background: linear-gradient(to bottom, #ccc 2%, #eee 22%);
 }
-div#location__field > input[name=location] + canvas {
+div#location__field > input[name=location] + span + canvas {
   left: 0;
 }
-div#location__field > input[name=location] + canvas + canvas {
+div#location__field > input[name=location] + span + canvas + canvas {
   right: 0;
 }
-div#location__field > input[name=location]:focus + canvas {
+div#location__field > input[name=location] + span:focus + canvas {
   transform: translateX(-100%);
   opacity: 0;
 }
-div#location__field > input[name=location]:focus + canvas + canvas {
+div#location__field > input[name=location] + span:focus + canvas + canvas {
+  transform: translateX(100%);
+  opacity: 0;
+}
+div#location__field > input[name=location]:focus + span {
+  color: #9356DC;
+}
+div#location__field > input[name=location]:focus + span + canvas {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+div#location__field > input[name=location]:focus + span + canvas + canvas {
   transform: translateX(100%);
   opacity: 0;
 }
 
-/*
-span.location__field__backcurtain {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: block;
-    background-color: red;
-
-    transition: transform 400ms, opacity 380ms;
-}
-span#location__field__backcurtain__left { left: 0; }
-span#location__field__backcurtain__right { right: 0; }
-*/
 div#home-explore-block {
   padding: 10.95% 0 15% 0;
   background-color: #fbfbfb;

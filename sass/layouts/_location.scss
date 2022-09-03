@@ -1,6 +1,6 @@
 form#location {
-	width: 100%;
-	height: 48px;
+    width: 100%;
+    height: 48px;
 }
 
 div#location__field {
@@ -8,8 +8,10 @@ div#location__field {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    gap: 4%;
 
     & > input[name="location"], & > span {
         position: relative;
@@ -22,6 +24,12 @@ div#location__field {
         background-color: transparent;
 
         text-align: center;
+
+    }
+
+    & > input[name="location"] + span {
+
+        transition: color 100ms;
 
         /** location field back curtain */
         & ~ canvas {
@@ -41,7 +49,6 @@ div#location__field {
             right: 0;
         }
         &:focus + canvas  {
-
             transform: translateX(-100%);
             opacity: 0;
         }
@@ -50,20 +57,20 @@ div#location__field {
             transform: translateX(100%);
             opacity: 0;
         }
+    }
 
+    & > input[name="location"]:focus + span {
+
+        color: $color-primary;
+
+        & + canvas  {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        & + canvas + canvas {
+
+            transform: translateX(100%);
+            opacity: 0;
+        }
     }
 }
-
-/*
-span.location__field__backcurtain {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: block;
-    background-color: red;
-
-    transition: transform 400ms, opacity 380ms;
-}
-span#location__field__backcurtain__left { left: 0; }
-span#location__field__backcurtain__right { right: 0; }
-*/
