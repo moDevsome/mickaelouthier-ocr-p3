@@ -1,0 +1,59 @@
+section#home-howto-section {
+	padding: 13.58% 0 17.45% 0;
+
+    & > h2 {
+        margin-bottom: 7.9%;
+    }
+
+    & > div.how-to-block {
+
+        width: 90%;
+        margin: auto;
+
+        & > div.how-to-block__item {
+            position: relative;
+            width: 96.2%;
+            margin: 0 0 6% auto;
+            padding: 7.1% 0;
+            display: flex;
+            gap: 6%;
+            align-items: center;
+            font-size: 1.02em;
+            background-color: lighten($color: #eee, $amount: 5%);
+            border-radius: 1.25em;
+            box-shadow: 0 0.25em 0.6em lighten($color: $color-button-shadow, $amount: 20%);
+
+            & > span.home-howto-number {
+                margin-left: -13px;
+                display: flex;
+                height: 26px;
+                width: 26px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2em;
+                color: #fff;
+                background-color: $color-primary;
+            }
+
+            & > span.home-howto-ico {
+                font-size: 1.15em;
+                color: #777;
+
+                & > i.fa-store {
+                    color: $color-primary;
+                }
+
+            }
+
+            & > span.home-howto-text {
+                font-weight: 600;
+                @media screen and (max-width: 310px) {
+                    max-width: 50%;
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -29,9 +29,17 @@ input, textarea {
 
 header, main, footer {
     width: 100%;
+	max-width: 100%;
 }
 
 body {
     font-family: "Roboto", arial, sans-serif;
 	font-size: 1em;
+}
+
+section > h2 {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 1.5em;
+	font-weight: 700;
 }
