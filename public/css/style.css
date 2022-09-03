@@ -1,14 +1,57 @@
-body {
-  font-family: "Roboto", arial, sans-serif;
+/** RESET
+A part from http://meyerweb.com/eric/tools/css/reset/
+**/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+input, textarea {
+  resize: none;
+  outline: none;
 }
 
 header, main, footer {
   width: 100%;
 }
 
-input, textarea {
-  resize: none;
-  outline: none;
+body {
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 1em;
+}
+
+button {
+  width: fit-content;
+  margin: auto;
+  padding: 4.7% 5.4%;
+  display: block;
+  border: medium none;
+  border-radius: 2em;
+  font-size: 1.02em;
+  color: #fff;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 0.25em 0.6em #999;
+  cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(#ff83dd, #9e67e0);
+  box-shadow: 0 0.25em 0.8em gray;
 }
 
 header {
@@ -88,6 +131,24 @@ span.location__field__backcurtain {
 span#location__field__backcurtain__left { left: 0; }
 span#location__field__backcurtain__right { right: 0; }
 */
+div#home-explore-block {
+  padding: 10.95% 0 15% 0;
+  background-color: #fbfbfb;
+}
+div#home-explore-block > .home-explore-block__h1 {
+  width: 90%;
+  margin: 0 auto 5.8% auto;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+div#home-explore-block > .home-explore-block__h1 + p {
+  width: 90%;
+  margin: 0 auto 7.8% auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+
 footer {
   width: 100%;
 }

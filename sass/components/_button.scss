@@ -1,0 +1,18 @@
+button {
+    width: fit-content;
+    margin: auto;
+    padding: 4.7% 5.4%;
+    display: block;
+    border: medium none;
+    border-radius: 2em;
+    font-size: 1.02em;
+    color: #fff;
+    background-image: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 0 0.25em 0.6em #999;
+    cursor: pointer;
+
+    &:hover {
+        background-image: linear-gradient(lighten($color-secondary,  $amount: 2%), lighten($color-primary, $amount: 4%));
+        box-shadow: 0 0.25em 0.8em darken($color: #999, $amount: 10%);
+    }
+}

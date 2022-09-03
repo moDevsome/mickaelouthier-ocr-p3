@@ -1,0 +1,20 @@
+div#home-explore-block {
+	padding: 10.95% 0 15% 0;
+    background-color: lighten($color: #eee, $amount: 5%);
+
+    & > .home-explore-block__h1 {
+
+        width: 90%;
+        margin: 0 auto 5.8% auto;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 700;
+
+        & + p {
+            width: 90%;
+            margin: 0 auto 7.8% auto;
+            text-align: center;
+            font-size: 1.2em;
+        }
+    }
+}
