@@ -6,3 +6,8 @@ body {
 header, main, footer {
     width: 100%;
 }
+
+input, textarea {
+    resize: none;
+    outline: none;
+}

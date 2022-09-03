@@ -1,0 +1,69 @@
+form#location {
+	width: 100%;
+	height: 48px;
+}
+
+div#location__field {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > input[name="location"], & > span {
+        position: relative;
+        z-index: 2;
+    }
+
+    & > input[name="location"] {
+        width: 34%;
+        border: medium none;
+        background-color: transparent;
+
+        text-align: center;
+
+        /** location field back curtain */
+        & ~ canvas {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            display: block;
+            background-color: #eee;
+            transition: transform 400ms, opacity 380ms;
+            background: linear-gradient(to bottom, #ccc 2%, #eee 22%);
+
+        }
+        & + canvas {
+            left: 0;
+        }
+        & + canvas + canvas {
+            right: 0;
+        }
+        &:focus + canvas  {
+
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        &:focus + canvas + canvas {
+
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+    }
+}
+
+/*
+span.location__field__backcurtain {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: block;
+    background-color: red;
+
+    transition: transform 400ms, opacity 380ms;
+}
+span#location__field__backcurtain__left { left: 0; }
+span#location__field__backcurtain__right { right: 0; }
+*/
