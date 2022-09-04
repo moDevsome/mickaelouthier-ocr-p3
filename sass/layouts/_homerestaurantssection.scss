@@ -33,9 +33,9 @@ section#home-restaurants-section {
             top: 4%;
             right: 6%;
             padding: 1.5% 3% 1% 3%;
-            color: #198754;
+            color: darken($color: $color-tertiary, $amount: 40%);
             font-weight: 600;
-            background-color: #84e8ba;
+            background-color: $color-tertiary;
             border-radius: 0.25em;
         }
 
