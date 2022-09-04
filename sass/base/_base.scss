@@ -22,11 +22,18 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
+// My custom reset
 input, textarea {
     resize: none;
     outline: none;
 }
+a {
+    text-decoration: none;
+    color: #000;
+}
 
+// Base
 header, main, footer {
     width: 100%;
     max-width: 100%;

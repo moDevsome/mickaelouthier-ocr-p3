@@ -1,6 +1,6 @@
 div#home-explore-block {
 	padding: 10.95% 0 15% 0;
-    background-color: lighten($color: #eee, $amount: 5%);
+    background-color: $section-background;
 
     & > .home-explore-block__h1 {
 

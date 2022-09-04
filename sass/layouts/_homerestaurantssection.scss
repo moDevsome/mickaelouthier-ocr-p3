@@ -1,0 +1,153 @@
+section#home-restaurants-section {
+	padding: 10% 0 10% 0;
+    background-color: $section-background;
+
+    // Define the gradient fill for the SVG heart
+    & > svg {
+        height: 0;
+
+        & > defs > linearGradient#heartgradient {
+
+            & > stop {
+                stop-color: $color-secondary;
+                stop-opacity: 1;
+
+                &:first-child {
+                    stop-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    & > h2 {
+        margin-bottom: 5.9%;
+    }
+
+    & > div.home-restaurants-section__item {
+        position: relative;
+        width: 90%;
+        margin: 0 auto 5% auto;
+
+        & > span.home-restaurants-new {
+            position: absolute;
+            top: 4%;
+            right: 6%;
+            padding: 1.5% 3% 1% 3%;
+            color: #198754;
+            font-weight: 600;
+            background-color: #84e8ba;
+            border-radius: 0.25em;
+        }
+
+        & > a.home-restaurants-section__item__img {
+            height: 180px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 1.2em 1.2em 0 0;
+
+            &--vertical-img {
+                flex-flow: column wrap;
+            }
+
+            > img {
+                width: 100%;
+                display: block;
+            }
+
+            &:hover + div.home-restaurants-section__item__info > a > b {
+                color: $color-primary;
+            }
+
+        }
+
+        div.home-restaurants-section__item__info {
+            padding: 4% 6% 4% 4%;
+            display: flex;
+            justify-content: space-between;
+            justify-content: space-between;
+            align-items: start;
+            background-color: #fff;
+            border-radius: 0 0 1.2em 1.2em;
+            box-shadow: 0 0.25em 0.6em lighten($color: $color-button-shadow, $amount: 20%);
+
+            & > a {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                &:hover > b {
+                    color: $color-primary;
+                }
+
+                & > span {
+                    font-size: 1.1em;
+                }
+
+                & > b {
+                    font-size: 1.2em;
+                    font-weight: 700;
+                }
+            }
+
+            & > button {
+                position: relative;
+                width: 35px;
+                height: 31px;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                font-size: 1.8em;
+                color: #000;
+                background-color: transparent;
+                background-image: none;
+                box-shadow: none;
+
+                & > svg {
+                    position: absolute;
+                    top: 0;
+                    left: 2px;
+                    z-index: 2;
+                    width: 100%;
+                    max-width: 30px;
+
+                    transition: opacity 200ms 200ms;
+
+                    &:first-child {
+                        z-index: 1;
+
+                        & > path {
+                            fill:url(#heartgradient); // Defined in index.html at : section#home-restaurants-section > svg > defs > linearGradient#heartgradient
+                        }
+                    }
+                    & + canvas {
+                        // This canvas hide the purple heart, it translate to the top when the button is hovered or touched
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+
+                        transform: translateY(0);
+                        transition: transform 400ms;
+                    }
+                }
+
+                &:hover, &:active {
+
+                    & > svg:not(:first-child) {
+                        opacity: 0;
+                    }
+                    & > canvas {
+                        transform: translateY(-32px);
+                    }
+
+                }
+
+            }
+        }
+    }
+}
