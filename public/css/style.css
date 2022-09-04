@@ -338,9 +338,34 @@ section#home-restaurants-section > div.home-restaurants-section__item div.home-r
 
 footer {
   width: 100%;
+  padding: 6% 0 8% 0;
+  background-color: #353535;
 }
 footer > div.footer-inner {
   width: 90%;
+  margin: 0 auto;
+}
+footer > div.footer-inner > svg {
+  width: 25%;
+  margin-bottom: 2%;
+}
+footer > div.footer-inner > svg > path {
+  fill: #fff;
+}
+footer > div.footer-inner > ul {
+  margin: 0;
+  padding: 0;
+}
+footer > div.footer-inner > ul > li {
+  margin-bottom: 2%;
+  list-style: none;
+}
+footer > div.footer-inner > ul > li, footer > div.footer-inner > ul > li > a {
+  color: #fff;
+}
+footer > div.footer-inner > ul > li:hover > a {
+  text-decoration: underline;
+  text-decoration-color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */

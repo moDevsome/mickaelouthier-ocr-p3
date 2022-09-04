@@ -1,11 +1,38 @@
 footer {
-
     width: 100%;
+    padding: 6% 0 8% 0;
+    background-color: #353535;
 
     & > div.footer-inner {
-
         width: $inner-width;
+        margin: 0 auto;
 
+        & > svg {
+            width: 25%;
+            margin-bottom: 2%;
+
+            & > path {
+                fill: #fff;
+            }
+        }
+
+        & > ul {
+            margin: 0;
+            padding: 0;
+
+            & > li {
+                margin-bottom: 2%;
+                list-style: none;
+            }
+            & > li, & > li > a {
+                color: #fff;
+            }
+            & > li:hover > a {
+                text-decoration: underline;
+                text-decoration-color: $color-secondary;
+            }
+
+        }
     }
 
 }
