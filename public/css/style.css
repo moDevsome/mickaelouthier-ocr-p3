@@ -107,6 +107,7 @@ div#location__field > input[name=location] {
   border: medium none;
   background-color: transparent;
   text-align: center;
+  font-weight: 600;
 }
 div#location__field > input[name=location] + span {
   transition: color 100ms;
@@ -166,7 +167,7 @@ div#home-explore-block > .home-explore-block__h1 + p {
 }
 
 section#home-howto-section {
-  padding: 13.58% 0 17.45% 0;
+  padding: 13.58% 0 15% 0;
 }
 section#home-howto-section > h2 {
   margin-bottom: 7.9%;
