@@ -2,23 +2,6 @@ section#home-restaurants-section {
 	padding: 10% 0 10% 0;
     background-color: $section-background;
 
-    // Define the gradient fill for the SVG heart
-    & > svg {
-        height: 0;
-
-        & > defs > linearGradient#heartgradient {
-
-            & > stop {
-                stop-color: $color-secondary;
-                stop-opacity: 1;
-
-                &:first-child {
-                    stop-color: $color-primary;
-                }
-            }
-        }
-    }
-
     & > h2 {
         margin-bottom: 5.9%;
     }
@@ -56,6 +39,7 @@ section#home-restaurants-section {
                 display: block;
             }
 
+            // TODO Faire en sorte que le changement de couleur soit directement géré par le survol de la carte complète "div.home-restaurants-section__item"
             &:hover + div.home-restaurants-section__item__info > a > b {
                 color: $color-primary;
             }
@@ -73,81 +57,14 @@ section#home-restaurants-section {
             box-shadow: 0 0.25em 0.6em lighten($color: $color-button-shadow, $amount: 20%);
 
             & > a {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
+                @include card-info-text;
 
+                // TODO Faire en sorte que le changement de couleur soit directement géré par le survol de la carte complète "div.home-restaurants-section__item"
                 &:hover > b {
                     color: $color-primary;
                 }
-
-                & > span {
-                    font-size: 1.1em;
-                }
-
-                & > b {
-                    font-size: 1.2em;
-                    font-weight: 700;
-                }
             }
 
-            & > button {
-                position: relative;
-                width: 35px;
-                height: 31px;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                font-size: 1.8em;
-                color: #000;
-                background-color: transparent;
-                background-image: none;
-                box-shadow: none;
-
-                & > svg {
-                    position: absolute;
-                    top: 0;
-                    left: 2px;
-                    z-index: 2;
-                    width: 100%;
-                    max-width: 30px;
-
-                    transition: opacity 200ms 200ms;
-
-                    &:first-child {
-                        z-index: 1;
-
-                        & > path {
-                            fill:url(#heartgradient); // Defined in index.html at : section#home-restaurants-section > svg > defs > linearGradient#heartgradient
-                        }
-                    }
-                    & + canvas {
-                        // This canvas hide the purple heart, it translate to the top when the button is hovered or touched
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: 2;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #fff;
-
-                        transform: translateY(0);
-                        transition: transform 400ms;
-                    }
-                }
-
-                &:hover, &:active {
-
-                    & > svg:not(:first-child) {
-                        opacity: 0;
-                    }
-                    & > canvas {
-                        transform: translateY(-32px);
-                    }
-
-                }
-
-            }
         }
     }
 }

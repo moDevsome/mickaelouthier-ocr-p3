@@ -17,3 +17,13 @@ header {
     }
 
 }
+
+body.page > header > a {
+    position: relative;
+
+    & > i {
+        position: absolute;
+        left: 0;
+        font-size: 1.4em;
+    }
+}

@@ -67,6 +67,64 @@ button:hover {
   box-shadow: 0 0.25em 0.8em gray;
 }
 
+svg#heartgradient-svg {
+  width: 0;
+  height: 0;
+}
+svg#heartgradient-svg > defs > linearGradient#heartgradient > stop {
+  stop-color: #FF79DA;
+  stop-opacity: 1;
+}
+svg#heartgradient-svg > defs > linearGradient#heartgradient > stop:first-child {
+  stop-color: #9356DC;
+}
+
+button.cpn-buttonheart {
+  position: relative;
+  width: 35px;
+  height: 31px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1.8em;
+  color: #000;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+button.cpn-buttonheart > svg {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 2;
+  width: 100%;
+  max-width: 30px;
+  transition: opacity 200ms 200ms;
+}
+button.cpn-buttonheart > svg:first-child {
+  z-index: 1;
+}
+button.cpn-buttonheart > svg:first-child > path {
+  fill: url(#heartgradient);
+}
+button.cpn-buttonheart > svg + canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateY(0);
+  transition: transform 400ms;
+}
+button.cpn-buttonheart:hover > svg:not(:first-child), button.cpn-buttonheart:active > svg:not(:first-child) {
+  opacity: 0;
+}
+button.cpn-buttonheart:hover > canvas, button.cpn-buttonheart:active > canvas {
+  transform: translateY(-32px);
+}
+
 header {
   height: 63px;
 }
@@ -81,6 +139,15 @@ header > a {
 }
 header > a > img {
   width: 49%;
+}
+
+body.page > header > a {
+  position: relative;
+}
+body.page > header > a > i {
+  position: absolute;
+  left: 0;
+  font-size: 1.4em;
 }
 
 form#location {
@@ -220,16 +287,6 @@ section#home-restaurants-section {
   padding: 10% 0 10% 0;
   background-color: #f6f6f6;
 }
-section#home-restaurants-section > svg {
-  height: 0;
-}
-section#home-restaurants-section > svg > defs > linearGradient#heartgradient > stop {
-  stop-color: #FF79DA;
-  stop-opacity: 1;
-}
-section#home-restaurants-section > svg > defs > linearGradient#heartgradient > stop:first-child {
-  stop-color: #9356DC;
-}
 section#home-restaurants-section > h2 {
   margin-bottom: 5.9%;
 }
@@ -281,60 +338,118 @@ section#home-restaurants-section > div.home-restaurants-section__item div.home-r
   flex-direction: column;
   gap: 4px;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a:hover > b {
-  color: #9356DC;
-}
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a > span {
-  font-size: 1.1em;
-}
 section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a > b {
   font-size: 1.2em;
   font-weight: 700;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button {
-  position: relative;
-  width: 35px;
-  height: 31px;
-  margin: 0;
-  padding: 0;
+section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a > span {
+  font-size: 1.1em;
+}
+section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a:hover > b {
+  color: #9356DC;
+}
+
+main.restaurant {
+  padding-bottom: 14%;
+  background-color: #f6f6f6;
+}
+main.restaurant > div.restaurant-cover {
+  height: 280px;
   overflow: hidden;
-  font-size: 1.8em;
-  color: #000;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button > svg {
-  position: absolute;
-  top: 0;
-  left: 2px;
-  z-index: 2;
+main.restaurant > div.restaurant-cover > img {
   width: 100%;
-  max-width: 30px;
-  transition: opacity 200ms 200ms;
+  display: block;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button > svg:first-child {
-  z-index: 1;
-}
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button > svg:first-child > path {
-  fill: url(#heartgradient);
-}
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button > svg + canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+main.restaurant > div.restaurant-header {
   width: 100%;
-  height: 100%;
+  margin: -12% auto 8% auto;
+  padding-top: 4%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  border-radius: 2em 2em 0 0;
+  position: relative;
+}
+main.restaurant > div.restaurant-header > div.restaurant-header-inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.restaurant > div.restaurant-header > div.restaurant-header-inner > h1.restaurant-header__h1 {
+  font-family: "Shrikhand", arial, sans-serif;
+  font-size: 2em;
+}
+main.restaurant > section {
+  width: 90%;
+  margin: 0 auto 10% auto;
+}
+main.restaurant > section > h3 {
+  margin-bottom: 4%;
+  text-transform: uppercase;
+}
+main.restaurant > section > h3::after {
+  width: 11%;
+  padding-top: 1%;
+  display: block;
+  border-bottom: 3px solid #99E2D0;
+  content: "";
+}
+main.restaurant > section > div.restaurant-menu__item {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto 4% auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
-  transform: translateY(0);
-  transition: transform 400ms;
+  border-radius: 1.25em;
+  box-shadow: 0 0.25em 0.6em #cccccc;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button:hover > svg:not(:first-child), section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button:active > svg:not(:first-child) {
-  opacity: 0;
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button:hover > canvas, section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > button:active > canvas {
-  transform: translateY(-32px);
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > b {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span {
+  font-size: 1.1em;
+}
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span > i {
+  font-size: 0.9em;
+}
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span > b {
+  font-weight: 600;
+}
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 1.25em 1.25em 0;
+}
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check > span > i {
+  font-size: 1.5em;
+  color: #fff;
+}
+main.restaurant > div#order-button-wrapper > button {
+  padding: 3.4% 10%;
 }
 
 footer {

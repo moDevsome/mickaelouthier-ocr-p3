@@ -1,10 +1,12 @@
 @import "./utils/variables";
 @import "./base/base";
-@import "./utils/placeholders";
+@import "./utils/mixins";
 @import "./components/button";
+@import "./components/buttonheart";
 @import "./layouts/header";
 @import "./layouts/location";
 @import "./layouts/homeexploreblock";
 @import "./layouts/homehowtosection";
 @import "./layouts/homerestaurantssection";
+@import "./layouts/restaurant";
 @import "./layouts/footer";
