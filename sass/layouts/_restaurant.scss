@@ -36,6 +36,12 @@ main.restaurant {
 
             }
 
+            & > button.cpn-buttonheart > svg + canvas {
+
+                background-color: $section-background;
+
+            }
+
         }
     }
 

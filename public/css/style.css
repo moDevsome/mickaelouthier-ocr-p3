@@ -382,6 +382,9 @@ main.restaurant > div.restaurant-header > div.restaurant-header-inner > h1.resta
   font-family: "Shrikhand", arial, sans-serif;
   font-size: 2em;
 }
+main.restaurant > div.restaurant-header > div.restaurant-header-inner > button.cpn-buttonheart > svg + canvas {
+  background-color: #f6f6f6;
+}
 main.restaurant > section {
   width: 90%;
   margin: 0 auto 10% auto;
