@@ -57,6 +57,7 @@ main.restaurant {
         }
 
         & > div.restaurant-menu__item {
+            position: relative;
             width: 100%;
             height: 80px;
             margin: 0 auto 4% auto;
@@ -67,20 +68,32 @@ main.restaurant {
             background-color: #fff;
             border-radius: 1.25em;
             box-shadow: 0 0.25em 0.6em lighten($color: $color-button-shadow, $amount: 20%);
+            overflow: hidden;
+            cursor: pointer;
 
             & > div.restaurant-menu__item__info {
-                width: 92%;
-                margin: 0 auto;
+                width: 92%; // we remove the sum of the 2 lateral padding width : 100% - (2 * 4%)
+                height: 100%;
+                padding: 0 4%;
 
                 @include card-info-text;
+                justify-content: center;
+                background-color: #fff;
+
+                transition: width $menu-item-check-transition-duration;
 
                 & > span {
                     display: flex;
-                    flex-flow: row wrap;
+                    flex-direction: row;
                     justify-content: space-between;
+                    align-items: center;
 
                     & > i {
+                        width: 81%;
                         font-size: 0.9em;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                     & > b {
                         font-weight: 600;
@@ -90,7 +103,7 @@ main.restaurant {
             }
 
             & > div.restaurant-menu__item__check {
-                width: 20%;
+                width: 0;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
@@ -99,15 +112,35 @@ main.restaurant {
                 background-color: $color-tertiary;
                 border-radius: 0 1.25em 1.25em 0;
 
-                & > span {
+                transition: width $menu-item-check-transition-duration;
 
-                    & > i {
-                        font-size: 1.5em;
-                        color: #fff;
-                    }
+                & > i {
+                    font-size: 1.6em;
+                    color: #fff;
+
+                    transform: rotate(280deg);
+                    transition: transform $menu-item-check-transition-duration ease 150ms;
+                }
+
+            }
+
+            &:hover {
+
+                & > div.restaurant-menu__item__info {
+
+                    width: 72%;
 
                 }
 
+                & > div.restaurant-menu__item__check {
+                    //transform: translateX(0);
+                    width: 18%;
+
+                    & > i {
+                        transform: rotate(0);
+
+                    }
+                }
             }
 
         }

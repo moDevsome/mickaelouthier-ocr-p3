@@ -7,3 +7,5 @@ $color-button-shadow: #999;
 $section-background: lighten($color: #eee, $amount: 3%);
 
 $inner-width: 90%;
+
+$menu-item-check-transition-duration: 450ms; // @see /sass/layouts/_restaurant.scss

@@ -398,6 +398,7 @@ main.restaurant > section > h3::after {
   content: "";
 }
 main.restaurant > section > div.restaurant-menu__item {
+  position: relative;
   width: 100%;
   height: 80px;
   margin: 0 auto 4% auto;
@@ -408,13 +409,19 @@ main.restaurant > section > div.restaurant-menu__item {
   background-color: #fff;
   border-radius: 1.25em;
   box-shadow: 0 0.25em 0.6em #cccccc;
+  overflow: hidden;
+  cursor: pointer;
 }
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info {
   width: 92%;
-  margin: 0 auto;
+  height: 100%;
+  padding: 0 4%;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  justify-content: center;
+  background-color: #fff;
+  transition: width 450ms;
 }
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > b {
   font-size: 1.2em;
@@ -425,17 +432,22 @@ main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__ite
 }
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span > i {
+  width: 81%;
   font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span > b {
   font-weight: 600;
 }
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check {
-  width: 20%;
+  width: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -443,10 +455,22 @@ main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__ite
   align-items: center;
   background-color: #99E2D0;
   border-radius: 0 1.25em 1.25em 0;
+  transition: width 450ms;
 }
-main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check > span > i {
-  font-size: 1.5em;
+main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check > i {
+  font-size: 1.6em;
   color: #fff;
+  transform: rotate(280deg);
+  transition: transform 450ms ease 150ms;
+}
+main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__info {
+  width: 72%;
+}
+main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__check {
+  width: 18%;
+}
+main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__check > i {
+  transform: rotate(0);
 }
 main.restaurant > div#order-button-wrapper > button {
   padding: 3.4% 10%;
