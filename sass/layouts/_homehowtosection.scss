@@ -23,6 +23,10 @@ section#home-howto-section {
             border-radius: 1.25em;
             box-shadow: 0 0.25em 0.6em lighten($color: $color-button-shadow, $amount: 20%);
 
+            &--third {
+                background-color: lighten($color: $color-primary, $amount: 35%);
+            }
+
             & > span.home-howto-number {
                 margin-left: -13px;
                 display: flex;

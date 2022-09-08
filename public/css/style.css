@@ -256,6 +256,9 @@ section#home-howto-section > div.how-to-block > div.how-to-block__item {
   border-radius: 1.25em;
   box-shadow: 0 0.25em 0.6em #cccccc;
 }
+section#home-howto-section > div.how-to-block > div.how-to-block__item--third {
+  background-color: #f2eafb;
+}
 section#home-howto-section > div.how-to-block > div.how-to-block__item > span.home-howto-number {
   margin-left: -13px;
   display: flex;
