@@ -1,3 +1,44 @@
+@keyframes menu-item-start-margin {
+    /*
+    0% {
+        margin-top: $menu-item-start-margin-value;
+    }
+    20% {
+        opacity: 0.25;
+    }
+    20% {
+        opacity: 0.50;
+    }
+    40% {
+        opacity: 0.75;
+    }
+    50%, 100% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: 0;
+    }
+    */
+    0% {
+        transform: translateY($menu-item-start-margin-value);
+    }
+    20% {
+        opacity: 0.25;
+    }
+    20% {
+        opacity: 0.50;
+    }
+    40% {
+        opacity: 0.75;
+    }
+    50%, 100% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 main.restaurant {
     padding-bottom: 14%;
     background-color: $section-background;
@@ -74,8 +115,24 @@ main.restaurant {
             background-color: #fff;
             border-radius: 1.25em;
             box-shadow: 0 0.25em 0.6em lighten($color: $color-button-shadow, $amount: 20%);
+            opacity: 0;
             overflow: hidden;
             cursor: pointer;
+            transform: translateY($menu-item-start-margin-value);
+
+            @for $i from 1 through 3 {
+
+                &--#{$i} {
+
+                    animation-name: menu-item-start-margin;
+                    animation-duration: 500ms;
+                    animation-fill-mode: forwards;
+                    animation-delay: $menu-item-animation-delay * $i;
+                    animation-timing-function: ease-out;
+
+                }
+
+            }
 
             & > div.restaurant-menu__item__info {
                 width: 92%; // we remove the sum of the 2 lateral padding width : 100% - (2 * 4%)
