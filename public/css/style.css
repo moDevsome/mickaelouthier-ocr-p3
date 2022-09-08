@@ -49,6 +49,26 @@ section > h2 {
   font-weight: 700;
 }
 
+@keyframes menu-item-start-margin {
+  0% {
+    transform: translateY(16%);
+  }
+  20% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.75;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 button {
   width: fit-content;
   margin: auto;
@@ -323,9 +343,6 @@ section#home-restaurants-section > div.home-restaurants-section__item > a.home-r
   width: 100%;
   display: block;
 }
-section#home-restaurants-section > div.home-restaurants-section__item > a.home-restaurants-section__item__img:hover + div.home-restaurants-section__item__info > a > b {
-  color: #9356DC;
-}
 section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info {
   padding: 4% 6% 4% 4%;
   display: flex;
@@ -348,50 +365,10 @@ section#home-restaurants-section > div.home-restaurants-section__item div.home-r
 section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a > span {
   font-size: 1.1em;
 }
-section#home-restaurants-section > div.home-restaurants-section__item div.home-restaurants-section__item__info > a:hover > b {
+section#home-restaurants-section > div.home-restaurants-section__item:hover div.home-restaurants-section__item__info > a > b {
   color: #9356DC;
 }
 
-@keyframes menu-item-start-margin {
-  /*
-  0% {
-      margin-top: $menu-item-start-margin-value;
-  }
-  20% {
-      opacity: 0.25;
-  }
-  20% {
-      opacity: 0.50;
-  }
-  40% {
-      opacity: 0.75;
-  }
-  50%, 100% {
-      opacity: 1;
-  }
-  100% {
-      margin-top: 0;
-  }
-  */
-  0% {
-    transform: translateY(10%);
-  }
-  20% {
-    opacity: 0.25;
-  }
-  20% {
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0.75;
-  }
-  50%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 main.restaurant {
   padding-bottom: 14%;
   background-color: #f6f6f6;
@@ -458,25 +435,25 @@ main.restaurant > section > div.restaurant-menu__item {
   opacity: 0;
   overflow: hidden;
   cursor: pointer;
-  transform: translateY(10%);
+  transform: translateY(16%);
 }
 main.restaurant > section > div.restaurant-menu__item--1 {
   animation-name: menu-item-start-margin;
-  animation-duration: 500ms;
+  animation-duration: 800ms;
   animation-fill-mode: forwards;
   animation-delay: 250ms;
   animation-timing-function: ease-out;
 }
 main.restaurant > section > div.restaurant-menu__item--2 {
   animation-name: menu-item-start-margin;
-  animation-duration: 500ms;
+  animation-duration: 800ms;
   animation-fill-mode: forwards;
   animation-delay: 500ms;
   animation-timing-function: ease-out;
 }
 main.restaurant > section > div.restaurant-menu__item--3 {
   animation-name: menu-item-start-margin;
-  animation-duration: 500ms;
+  animation-duration: 800ms;
   animation-fill-mode: forwards;
   animation-delay: 750ms;
   animation-timing-function: ease-out;

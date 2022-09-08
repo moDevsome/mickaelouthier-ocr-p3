@@ -1,0 +1,20 @@
+@keyframes menu-item-start-margin {
+    0% {
+        transform: translateY($menu-item-start-margin-value);
+    }
+    20% {
+        opacity: 0.25;
+    }
+    20% {
+        opacity: 0.50;
+    }
+    40% {
+        opacity: 0.75;
+    }
+    50%, 100% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

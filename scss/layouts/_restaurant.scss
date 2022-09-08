@@ -1,44 +1,3 @@
-@keyframes menu-item-start-margin {
-    /*
-    0% {
-        margin-top: $menu-item-start-margin-value;
-    }
-    20% {
-        opacity: 0.25;
-    }
-    20% {
-        opacity: 0.50;
-    }
-    40% {
-        opacity: 0.75;
-    }
-    50%, 100% {
-        opacity: 1;
-    }
-    100% {
-        margin-top: 0;
-    }
-    */
-    0% {
-        transform: translateY($menu-item-start-margin-value);
-    }
-    20% {
-        opacity: 0.25;
-    }
-    20% {
-        opacity: 0.50;
-    }
-    40% {
-        opacity: 0.75;
-    }
-    50%, 100% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
 main.restaurant {
     padding-bottom: 14%;
     background-color: $section-background;
@@ -125,7 +84,7 @@ main.restaurant {
                 &--#{$i} {
 
                     animation-name: menu-item-start-margin;
-                    animation-duration: 500ms;
+                    animation-duration: 800ms;
                     animation-fill-mode: forwards;
                     animation-delay: $menu-item-animation-delay * $i;
                     animation-timing-function: ease-out;

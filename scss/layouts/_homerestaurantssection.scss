@@ -39,11 +39,6 @@ section#home-restaurants-section {
                 display: block;
             }
 
-            // TODO Faire en sorte que le changement de couleur soit directement géré par le survol de la carte complète "div.home-restaurants-section__item"
-            &:hover + div.home-restaurants-section__item__info > a > b {
-                color: $color-primary;
-            }
-
         }
 
         div.home-restaurants-section__item__info {
@@ -58,11 +53,14 @@ section#home-restaurants-section {
 
             & > a {
                 @include card-info-text;
+            }
 
-                // TODO Faire en sorte que le changement de couleur soit directement géré par le survol de la carte complète "div.home-restaurants-section__item"
-                &:hover > b {
-                    color: $color-primary;
-                }
+        }
+
+        &:hover {
+
+            div.home-restaurants-section__item__info > a > b {
+                color: $color-primary;
             }
 
         }
