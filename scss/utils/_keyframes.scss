@@ -1,3 +1,71 @@
+// used at /sass/layouts/_loader.scss
+@keyframes loader-spinn {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(340deg);
+    }
+}
+
+@keyframes loader-spinn-demo {
+    0% {
+        opacity: 0;
+        height: 100%;
+    }
+    10%, 90% {
+        opacity: 1;
+        height: 100%;
+    }
+    99% {
+        height: 100%;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@keyframes loader-text-translation-o {
+    0% {
+        transform: translateY(15px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+@keyframes loader-text-translation-m {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes loader-text-translation-f {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+// used at /sass/layouts/_restaurant.scss
 @keyframes menu-item-start-margin {
     0% {
         transform: translateY($menu-item-start-margin-value);
