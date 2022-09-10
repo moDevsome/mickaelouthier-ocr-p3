@@ -211,6 +211,11 @@ button.cpn-buttonheart:hover > canvas, button.cpn-buttonheart:active > canvas {
 header {
   height: 63px;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  header {
+    height: 93px;
+  }
+}
 header > a {
   width: 90%;
   height: 100%;
@@ -222,6 +227,11 @@ header > a {
 }
 header > a > img {
   width: 49%;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  header > a > img {
+    width: 40%;
+  }
 }
 
 body.page > header > a {
@@ -330,6 +340,11 @@ form#location {
   width: 100%;
   height: 48px;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  form#location {
+    height: 68px;
+  }
+}
 
 div#location__field {
   position: relative;
@@ -341,6 +356,11 @@ div#location__field {
   justify-content: center;
   gap: 4%;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  div#location__field {
+    gap: 1%;
+  }
+}
 div#location__field > input[name=location], div#location__field > span {
   position: relative;
   z-index: 2;
@@ -351,6 +371,11 @@ div#location__field > input[name=location] {
   background-color: transparent;
   text-align: center;
   font-weight: 600;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  div#location__field > input[name=location] {
+    width: fit-content;
+  }
 }
 div#location__field > input[name=location] + span {
   transition: color 100ms;
@@ -395,6 +420,11 @@ div#home-explore-block {
   padding: 10.95% 0 15% 0;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  div#home-explore-block {
+    padding: 6% 0 8% 0;
+  }
+}
 div#home-explore-block > .home-explore-block__h1 {
   width: 90%;
   margin: 0 auto 5.8% auto;
@@ -402,18 +432,38 @@ div#home-explore-block > .home-explore-block__h1 {
   font-size: 2em;
   font-weight: 700;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  div#home-explore-block > .home-explore-block__h1 {
+    margin: 0 auto 3.8% auto;
+  }
+}
 div#home-explore-block > .home-explore-block__h1 + p {
   width: 90%;
   margin: 0 auto 7.8% auto;
   text-align: center;
   font-size: 1.2em;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  div#home-explore-block > .home-explore-block__h1 + p {
+    margin: 0 auto 5.8% auto;
+  }
+}
 
 section#home-howto-section {
   padding: 13.58% 0 15% 0;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-howto-section {
+    padding: 8% 0 10% 0;
+  }
+}
 section#home-howto-section > h2 {
   margin-bottom: 7.9%;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-howto-section > h2 {
+    margin-bottom: 4.9%;
+  }
 }
 section#home-howto-section > div.how-to-block {
   width: 90%;
@@ -446,9 +496,21 @@ section#home-howto-section > div.how-to-block > div.how-to-block__item > span.ho
   color: #fff;
   background-color: #9356DC;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-howto-section > div.how-to-block > div.how-to-block__item > span.home-howto-number {
+    height: 42px;
+    width: 42px;
+    margin-left: -21px;
+  }
+}
 section#home-howto-section > div.how-to-block > div.how-to-block__item > span.home-howto-ico {
   font-size: 1.15em;
   color: #777;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-howto-section > div.how-to-block > div.how-to-block__item > span.home-howto-ico {
+    font-size: 1.5em;
+  }
 }
 section#home-howto-section > div.how-to-block > div.how-to-block__item > span.home-howto-ico > i.fa-store {
   color: #9356DC;
@@ -461,18 +523,43 @@ section#home-howto-section > div.how-to-block > div.how-to-block__item > span.ho
     max-width: 50%;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-howto-section > div.how-to-block > div.how-to-block__item > span.home-howto-text {
+    font-size: 1.25em;
+  }
+}
 
 section#home-restaurants-section {
   padding: 10% 0 10% 0;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-restaurants-section {
+    padding: 8% 0 8% 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5%;
+  }
+}
 section#home-restaurants-section > h2 {
   margin-bottom: 5.9%;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-restaurants-section > h2 {
+    margin-bottom: 4.9%;
+  }
 }
 section#home-restaurants-section > div.home-restaurants-section__item {
   position: relative;
   width: 90%;
   margin: 0 auto 5% auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  section#home-restaurants-section > div.home-restaurants-section__item {
+    width: 40%;
+    margin: 0 0 5% 0;
+  }
 }
 section#home-restaurants-section > div.home-restaurants-section__item > span.home-restaurants-new {
   position: absolute;
@@ -565,6 +652,11 @@ main.restaurant > section {
   width: 90%;
   margin: 0 auto 10% auto;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > section {
+    margin: 0 auto 8% auto;
+  }
+}
 main.restaurant > section > h3 {
   margin-bottom: 4%;
   text-transform: uppercase;
@@ -575,6 +667,15 @@ main.restaurant > section > h3::after {
   display: block;
   border-bottom: 3px solid #99E2D0;
   content: "";
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > section > h3 {
+    text-align: center;
+  }
+  main.restaurant > section > h3::after {
+    width: 14%;
+    margin: 0 auto;
+  }
 }
 main.restaurant > section > div.restaurant-menu__item {
   position: relative;
@@ -632,6 +733,15 @@ main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__ite
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span {
   font-size: 1.1em;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info {
+    width: fit-content;
+    min-width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    transform: translateX(13%);
+  }
+}
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span {
   display: flex;
   flex-direction: row;
@@ -659,6 +769,13 @@ main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__ite
   border-radius: 0 1.25em 1.25em 0;
   transition: width 450ms;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check {
+    width: 14%;
+    transform: translateX(100%);
+    transition: transform 450ms;
+  }
+}
 main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__item__check > i {
   font-size: 1.6em;
   color: #fff;
@@ -668,8 +785,19 @@ main.restaurant > section > div.restaurant-menu__item > div.restaurant-menu__ite
 main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__info {
   width: 72%;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__info {
+    width: fit-content;
+  }
+}
 main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__check {
   width: 18%;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__check {
+    width: 14%;
+    transform: translateX(0);
+  }
 }
 main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-menu__item__check > i {
   transform: rotate(0);

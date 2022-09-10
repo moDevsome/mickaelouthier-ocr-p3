@@ -2,6 +2,10 @@ div#home-explore-block {
 	padding: 10.95% 0 15% 0;
     background-color: $section-background;
 
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        padding: 6% 0 8% 0;
+    }
+
     & > .home-explore-block__h1 {
 
         width: 90%;
@@ -10,11 +14,20 @@ div#home-explore-block {
         font-size: 2em;
         font-weight: 700;
 
+        @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+            margin: 0 auto 3.8% auto;
+        }
+
         & + p {
             width: 90%;
             margin: 0 auto 7.8% auto;
             text-align: center;
             font-size: 1.2em;
+
+            @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                margin: 0 auto 5.8% auto;
+            }
+
         }
     }
 }

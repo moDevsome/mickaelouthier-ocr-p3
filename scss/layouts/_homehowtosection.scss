@@ -1,8 +1,16 @@
 section#home-howto-section {
 	padding: 13.58% 0 15% 0;
 
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        padding: 8% 0 10% 0;
+    }
+
     & > h2 {
         margin-bottom: 7.9%;
+
+        @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+            margin-bottom: 4.9%;
+        }
     }
 
     & > div.how-to-block {
@@ -37,11 +45,21 @@ section#home-howto-section {
                 border-radius: 2em;
                 color: #fff;
                 background-color: $color-primary;
+
+                @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                    height: 42px;
+                    width: 42px;
+                    margin-left: -21px;
+                }
             }
 
             & > span.home-howto-ico {
                 font-size: 1.15em;
                 color: $color-gray;
+
+                @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                    font-size: 1.5em;
+                }
 
                 & > i.fa-store {
                     color: $color-primary;
@@ -53,6 +71,10 @@ section#home-howto-section {
                 font-weight: 600;
                 @media screen and (max-width: 310px) {
                     max-width: 50%;
+                }
+
+                @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                    font-size: 1.25em;
                 }
             }
 

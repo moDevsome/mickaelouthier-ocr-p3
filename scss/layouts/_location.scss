@@ -1,6 +1,10 @@
 form#location {
     width: 100%;
     height: 48px;
+
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        height: 68px;
+    }
 }
 
 div#location__field {
@@ -12,6 +16,10 @@ div#location__field {
     align-items: center;
     justify-content: center;
     gap: 4%;
+
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        gap: 1%;
+    }
 
     & > input[name="location"], & > span {
         position: relative;
@@ -25,6 +33,9 @@ div#location__field {
         text-align: center;
         font-weight: 600;
 
+        @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+            width: fit-content;
+        }
     }
 
     & > input[name="location"] + span {

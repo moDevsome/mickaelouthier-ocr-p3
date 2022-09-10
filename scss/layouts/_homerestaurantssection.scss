@@ -2,14 +2,31 @@ section#home-restaurants-section {
 	padding: 10% 0 10% 0;
     background-color: $section-background;
 
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        padding: 8% 0 8% 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 5%;
+    }
+
     & > h2 {
         margin-bottom: 5.9%;
+
+        @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+            margin-bottom: 4.9%;
+        }
     }
 
     & > div.home-restaurants-section__item {
         position: relative;
         width: 90%;
         margin: 0 auto 5% auto;
+
+        @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+            width: 40%;
+            margin: 0 0 5% 0;
+        }
 
         & > span.home-restaurants-new {
             position: absolute;

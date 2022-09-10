@@ -1,6 +1,10 @@
 header {
 	height: 63px;
 
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        height: 93px;
+    }
+
     & > a {
         width: 90%;
         height: 100%;
@@ -12,12 +16,17 @@ header {
 
         & > img {
             width: 49%;
+
+            @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                width: 40%;
+            }
         }
 
     }
 
 }
 
+// TODO: Il faut revoir cette partie, le rendu visuel n'est pas bon sur la majorité des téléphones et tablettes
 body.page > header > a {
     position: relative;
 
