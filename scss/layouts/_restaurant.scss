@@ -2,43 +2,61 @@ main.restaurant {
     padding-bottom: 14%;
     background-color: $section-background;
 
-    & > div.restaurant-cover {
-        height: 280px;
-        overflow: hidden;
-
-        & > img {
-            width: 100%;
-            display: block;
-        }
-    }
-
     & > div.restaurant-header {
-        width: 100%;
-        margin: -12% auto 8% auto;
-        padding-top: 4%;
-        display: flex;
-        justify-content: space-between;
-        background-color: $section-background;
-        border-radius: 2em 2em 0 0;
         position: relative;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 10%;
 
-        & > div.restaurant-header-inner {
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
 
-            & > h1.restaurant-header__h1 {
-
-                font-family: "Shrikhand", arial, sans-serif;
-                font-size: 2em;
-
+        & > div.restaurant-cover {
+            height: 300px;
+            @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                height: 450px;
             }
 
-            & > button.cpn-buttonheart > svg + canvas {
+            & > img {
+                width: 100%;
+                height: 280px;
+                display: block;
+                object-fit: cover;
 
-                background-color: $section-background;
+                @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                    height: 430px;
+                }
+            }
+        }
+
+        & > div.restaurant-header-content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: $section-background;
+            border-radius: 2em 2em 0 0;
+            border-radius: 2.2em 2.2em 0 0;
+
+
+            & > div.restaurant-header-content-inner {
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 6%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & > h1.restaurant-header__h1 {
+
+                    font-family: "Shrikhand", arial, sans-serif;
+                    font-size: 2em;
+
+                }
+
+                & > button.cpn-buttonheart > svg + canvas {
+
+                    background-color: $section-background;
+
+                }
 
             }
 
