@@ -230,6 +230,9 @@ main.restaurant {
 
             padding: 3.4% 10%;
 
+            @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+                padding: 3.25% 8.5%;
+            }
         }
 
     }

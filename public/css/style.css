@@ -145,6 +145,12 @@ button {
   box-shadow: 0 0.25em 0.6em #999;
   cursor: pointer;
 }
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  button {
+    padding: 4.2% 5%;
+    font-size: 1.25em;
+  }
+}
 button:hover {
   background-image: linear-gradient(#ff83dd, #9e67e0);
   box-shadow: 0 0.25em 0.8em gray;
@@ -821,6 +827,11 @@ main.restaurant > section > div.restaurant-menu__item:hover > div.restaurant-men
 }
 main.restaurant > div#order-button-wrapper > button {
   padding: 3.4% 10%;
+}
+@media screen and (min-width: 600px) and (max-width: 1079px) {
+  main.restaurant > div#order-button-wrapper > button {
+    padding: 3.25% 8.5%;
+  }
 }
 
 footer {

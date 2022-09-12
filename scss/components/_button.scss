@@ -11,6 +11,11 @@ button {
     box-shadow: 0 0.25em 0.6em $color-button-shadow;
     cursor: pointer;
 
+    @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+        padding: 4.2% 5%;
+        font-size: 1.25em;
+    }
+
     &:hover {
         background-image: linear-gradient(lighten($color-secondary,  $amount: 2%), lighten($color-primary, $amount: 4%));
         box-shadow: 0 0.25em 0.8em darken($color: $color-button-shadow, $amount: 10%);
