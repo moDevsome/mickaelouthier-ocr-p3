@@ -1,8 +1,12 @@
 section#home-howto-section {
-	padding: 13.58% 0 15% 0;
+    padding: 13.58% 0 15% 0;
 
     @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
         padding: 8% 0 10% 0;
+    }
+    @media screen and (min-width: $desktop-min-width-br) {
+        width: 50%;
+        padding: 8.45% 0 2% 0;
     }
 
     & > h2 {
@@ -10,6 +14,9 @@ section#home-howto-section {
 
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
             margin-bottom: 4.9%;
+        }
+        @media screen and (min-width: $desktop-min-width-br) {
+            margin-bottom: 7%;
         }
     }
 
@@ -35,6 +42,10 @@ section#home-howto-section {
                 background-color: lighten($color: $color-primary, $amount: 35%);
             }
 
+            @media screen and (min-width: $desktop-min-width-br) {
+                padding: 3.2% 0;
+            }
+
             & > span.home-howto-number {
                 margin-left: -13px;
                 display: flex;
@@ -50,6 +61,11 @@ section#home-howto-section {
                     height: 42px;
                     width: 42px;
                     margin-left: -21px;
+                }
+                @media screen and (min-width: $desktop-min-width-br) {
+                    height: 50px;
+                    width: 50px;
+                    margin-left: -25px;
                 }
             }
 

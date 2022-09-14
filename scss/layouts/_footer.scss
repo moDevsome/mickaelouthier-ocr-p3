@@ -36,3 +36,27 @@ footer {
     }
 
 }
+
+@media screen and (min-width: $desktop-min-width-br) {
+
+    footer {
+        padding: 4% 0;
+
+        & > div.footer-inner {
+
+            & > svg {
+                width: fit-content;
+            }
+
+            & > ul {
+
+                & > li {
+                    margin-bottom: 0.85%;
+                    font-size: 0.85em;
+
+                }
+            }
+        }
+
+    }
+}

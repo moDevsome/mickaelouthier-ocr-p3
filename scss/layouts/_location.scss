@@ -5,6 +5,9 @@ form#location {
     @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
         height: 68px;
     }
+    @media screen and (min-width: $desktop-min-width-br) {
+        height: 98px;
+    }
 }
 
 div#location__field {
@@ -19,6 +22,9 @@ div#location__field {
 
     @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
         gap: 1%;
+    }
+    @media screen and (min-width: $desktop-min-width-br) {
+        gap: 0;
     }
 
     & > input[name="location"], & > span {
@@ -35,6 +41,9 @@ div#location__field {
 
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
             width: fit-content;
+        }
+        @media screen and (min-width: $desktop-min-width-br) {
+            max-width: 280px;
         }
     }
 

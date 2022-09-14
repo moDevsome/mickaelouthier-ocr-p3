@@ -6,8 +6,20 @@
     & > b {
         font-size: 1.2em;
         font-weight: 700;
+        @media screen and (min-width: $desktop-min-width-br) {
+            font-size: 1.1em;
+        }
     }
     & > span {
         font-size: 1.1em;
+        @media screen and (min-width: $desktop-min-width-br) {
+            font-size: 0.9em;
+        }
     }
+}
+
+@mixin text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }

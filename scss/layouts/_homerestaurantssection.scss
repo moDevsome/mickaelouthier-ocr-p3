@@ -1,5 +1,5 @@
 section#home-restaurants-section {
-	padding: 10% 0 10% 0;
+    padding: 10% 0 10% 0;
     background-color: $section-background;
 
     @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
@@ -7,7 +7,15 @@ section#home-restaurants-section {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        gap: 5%;
+        gap: 5%; // TODO : supprimer le gap vertical
+    }
+
+    @media screen and (min-width: $desktop-min-width-br) {
+        padding: 2% 0 2% 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 0 5%;
     }
 
     & > h2 {
@@ -15,6 +23,11 @@ section#home-restaurants-section {
 
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
             margin-bottom: 4.9%;
+        }
+        @media screen and (min-width: $desktop-min-width-br) {
+            width: 100%;
+            margin: 0 auto 3% auto;
+            text-align: center;
         }
     }
 
@@ -27,6 +40,11 @@ section#home-restaurants-section {
             width: 40%;
             margin: 0 0 5% 0;
         }
+        @media screen and (min-width: $desktop-min-width-br) {
+            width: 30%;
+            max-width: 420px;
+            margin: 0 0 5% 0;
+        }
 
         & > span.home-restaurants-new {
             position: absolute;
@@ -37,6 +55,10 @@ section#home-restaurants-section {
             font-weight: 600;
             background-color: $color-tertiary;
             border-radius: 0.25em;
+
+            @media screen and (min-width: $desktop-min-width-br) {
+                font-size: 0.85em;
+            }
         }
 
         & > a.home-restaurants-section__item__img {
@@ -47,6 +69,10 @@ section#home-restaurants-section {
             overflow: hidden;
             border-radius: 1.2em 1.2em 0 0;
 
+            @media screen and (min-width: $desktop-min-width-br) {
+                height: 220px;
+            }
+
             &--vertical-img {
                 flex-flow: column wrap;
             }
@@ -54,6 +80,12 @@ section#home-restaurants-section {
             > img {
                 width: 100%;
                 display: block;
+
+                @media screen and (min-width: $desktop-min-width-br) {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
             }
 
         }

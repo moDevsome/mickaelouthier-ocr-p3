@@ -1,8 +1,11 @@
 header {
-	height: 63px;
+    height: 63px;
 
     @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
         height: 93px;
+    }
+    @media screen and (min-width: $desktop-min-width-br) {
+        height: 98px;
     }
 
     & > a {
@@ -19,6 +22,10 @@ header {
 
             @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
                 width: 40%;
+            }
+            @media screen and (min-width: $desktop-min-width-br) {
+                width: 28%;
+                max-width: 370px;
             }
         }
 

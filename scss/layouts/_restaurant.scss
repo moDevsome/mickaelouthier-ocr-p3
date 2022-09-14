@@ -8,7 +8,6 @@ main.restaurant {
         height: fit-content;
         margin-bottom: 10%;
 
-
         & > div.restaurant-cover {
             height: 300px;
             @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
@@ -60,6 +59,10 @@ main.restaurant {
 
             }
 
+        }
+
+        & > canvas.restaurant-header__background {
+            display: none;
         }
     }
 
@@ -155,9 +158,7 @@ main.restaurant {
                     & > i {
                         width: 81%;
                         font-size: 0.9em;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        @include text-overflow;
                     }
                     & > b {
                         font-weight: 600;
@@ -237,4 +238,90 @@ main.restaurant {
 
     }
 
+}
+
+@media screen and (min-width: $desktop-min-width-br) {
+    main.restaurant {
+        padding-bottom: 10%;
+        justify-content: space-evenly;
+
+        & > div.restaurant-header {
+            margin-bottom: 6%;
+
+            & > div.restaurant-cover {
+                height: fit-content;
+
+                & > img {
+                    width: 60%;
+                    height: 300px;
+                    margin: 0 auto;
+                }
+            }
+
+            & > div.restaurant-header-content {
+                left: calc((100% - 60%) /2);
+                width: 60%;
+                margin: 0 auto;
+
+                & > div.restaurant-header-content-inner {
+                    padding-top: 1%;
+                }
+
+            }
+
+            & > canvas.restaurant-header__background {
+                position: absolute;
+                top: 0;
+                z-index: 2;
+                width: calc((100% - 60%) / 2);
+                height: 100%;
+                display: block;
+                background-image: linear-gradient(90deg, lighten($color: $color-primary, $amount: 30%) 0%, rgba(255, 255, 255, 1) 100%);
+                border-bottom: 2px solid #ccc;
+
+                &--left {
+                    left: 0;
+                }
+                &--right {
+                    right: 0;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        & > section {
+            width: 30%;
+            max-width: 475px;
+            margin: 0 0 6% 0;
+
+            & > h3 {
+                padding-left: 3.25%;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            & > div.restaurant-menu__item {
+
+                & > div.restaurant-menu__item__info  > b {
+                    @include text-overflow;
+                }
+
+                & > div.restaurant-menu__item__check > i {
+                    font-size: 1.2em;
+                }
+
+            }
+        }
+
+        & > div#order-button-wrapper {
+            width: 100%;
+
+            & > button {
+                padding: 1.8% 6%;
+            }
+
+        }
+    }
 }

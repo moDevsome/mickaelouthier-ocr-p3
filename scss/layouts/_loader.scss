@@ -92,3 +92,15 @@ aside#lyt-loader {
         }
     }
 }
+
+@media screen and (min-width: $desktop-min-width-br) {
+
+    aside#lyt-loader > div#loader-inner > div#loader-text > div#loader-text-inner {
+        transform: translateX(-9px);
+
+        & > span > i {
+            font-size: 2.75em;
+        }
+    }
+
+}
