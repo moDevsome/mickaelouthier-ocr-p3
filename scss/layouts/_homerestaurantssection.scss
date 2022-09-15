@@ -35,6 +35,7 @@ section#home-restaurants-section {
         position: relative;
         width: 90%;
         margin: 0 auto 5% auto;
+        // TODO : corrige le problème d'élement collé au bord : 0 1% 5% 1%
 
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
             width: 40%;
@@ -43,7 +44,7 @@ section#home-restaurants-section {
         @media screen and (min-width: $desktop-min-width-br) {
             width: 30%;
             max-width: 420px;
-            margin: 0 0 5% 0;
+            margin: 0 0.5% 5% 0.5%;
         }
 
         & > span.home-restaurants-new {
