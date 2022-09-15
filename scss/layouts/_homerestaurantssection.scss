@@ -32,10 +32,8 @@ section#home-restaurants-section {
     }
 
     & > div.home-restaurants-section__item {
-        position: relative;
         width: 90%;
         margin: 0 auto 5% auto;
-        // TODO : corrige le problème d'élement collé au bord : 0 1% 5% 1%
 
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
             width: 40%;
@@ -47,22 +45,8 @@ section#home-restaurants-section {
             margin: 0 0.5% 5% 0.5%;
         }
 
-        & > span.home-restaurants-new {
-            position: absolute;
-            top: 4%;
-            right: 6%;
-            padding: 1.5% 3% 1% 3%;
-            color: darken($color: $color-tertiary, $amount: 40%);
-            font-weight: 600;
-            background-color: $color-tertiary;
-            border-radius: 0.25em;
-
-            @media screen and (min-width: $desktop-min-width-br) {
-                font-size: 0.85em;
-            }
-        }
-
         & > a.home-restaurants-section__item__img {
+            position: relative;
             height: 180px;
             display: flex;
             flex-flow: row wrap;
@@ -76,6 +60,19 @@ section#home-restaurants-section {
 
             &--vertical-img {
                 flex-flow: column wrap;
+            }
+
+            & > span.home-restaurants-new {
+                position: absolute;
+                top: 7%;
+                right: 4%;
+                padding: 2% 4.2% 1.6% 4.2%;
+                font-size: 0.85em;
+                color: darken($color: $color-tertiary, $amount: 40%);
+                font-weight: 600;
+                background-color: $color-tertiary;
+                border-radius: 0.25em;
+
             }
 
             > img {
