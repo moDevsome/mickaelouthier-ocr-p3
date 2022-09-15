@@ -240,6 +240,33 @@ main.restaurant {
 
 }
 
+// Adaptative style for small phone like Galaxy fold
+@media screen and (max-width: $smallphone-max-width-br) {
+
+    main.restaurant {
+
+        & > div.restaurant-header > div.restaurant-header-content > div.restaurant-header-content-inner {
+
+            & > h1.restaurant-header__h1 {
+                font-size: 1.4em;
+            }
+
+            & > button.cpn-buttonheart > svg {
+                left: 6px;
+                width: 75%;
+            }
+
+        }
+
+        & > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span > i {
+            width: 71%;
+        }
+
+    }
+
+}
+
+// Adaptative style for desktop
 @media screen and (min-width: $desktop-min-width-br) {
     main.restaurant {
         padding-bottom: 10%;
