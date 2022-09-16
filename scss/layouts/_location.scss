@@ -19,6 +19,7 @@ div#location__field {
     align-items: center;
     justify-content: center;
     gap: 4%;
+    overflow: hidden; // prevent horizontal overflow when input[name="location"] is focused
 
     @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
         gap: 1%;
