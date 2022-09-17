@@ -94,7 +94,7 @@ main.lyt-restaurant {
             cursor: pointer;
             transform: translateY($menu-item-start-margin-value);
 
-            @for $i from 1 through 3 {
+            @for $i from 1 through 10 { // We asume that there will be never more than 10 dish in a category
 
                 &--#{$i} {
 
