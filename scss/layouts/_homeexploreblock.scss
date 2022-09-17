@@ -1,4 +1,4 @@
-div#home-explore-block {
+div#lyt-home-explore-block {
     padding: 10.95% 0 15% 0;
     background-color: $section-background;
 
@@ -12,9 +12,9 @@ div#home-explore-block {
 
     & > .home-explore-block__h1 {
         width: 90%;
-        margin: 0 auto 5.8% auto;
+        margin: 0 auto 4% auto;
         text-align: center;
-        font-size: 2em;
+        font-size: 1.8em;
         font-weight: 700;
 
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
@@ -38,7 +38,7 @@ div#home-explore-block {
 
 @media screen and (min-width: $desktop-min-width-br) {
 
-    div#home-explore-block {
+    div#lyt-home-explore-block {
         position: relative;
         width: 50%;
         padding-top: 8%;

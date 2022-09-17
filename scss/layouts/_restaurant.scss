@@ -1,4 +1,4 @@
-main.restaurant {
+main.lyt-restaurant {
     padding-bottom: 14%;
     background-color: $section-background;
 
@@ -29,7 +29,6 @@ main.restaurant {
             border-radius: 2em 2em 0 0;
             border-radius: 2.2em 2.2em 0 0;
 
-
             & > div.restaurant-header-content-inner {
                 width: 90%;
                 margin: 0 auto;
@@ -38,10 +37,10 @@ main.restaurant {
                 justify-content: space-between;
                 align-items: center;
 
-                & > h1.restaurant-header__h1 {
+                & > h1 {
 
                     font-family: "Shrikhand", arial, sans-serif;
-                    font-size: 2em;
+                    font-size: 1.8em;
 
                 }
 
@@ -182,7 +181,6 @@ main.restaurant {
     & > div#order-button-wrapper {
 
         & > button {
-
             padding: 3.4% 10%;
 
         }
@@ -193,12 +191,11 @@ main.restaurant {
 
 // Adaptative style for small phone like Galaxy fold
 @media screen and (max-width: $smallphone-max-width-br) {
-
-    main.restaurant {
+    main.lyt-restaurant {
 
         & > div.restaurant-header > div.restaurant-header-content > div.restaurant-header-content-inner {
 
-            & > h1.restaurant-header__h1 {
+            & > h1 {
                 font-size: 1.4em;
             }
 
@@ -209,8 +206,15 @@ main.restaurant {
 
         }
 
-        & > section > div.restaurant-menu__item > div.restaurant-menu__item__info > span > i {
-            width: 71%;
+        & > section > div.restaurant-menu__item > div.restaurant-menu__item__info {
+
+            & > b {
+                font-size: 1em;
+            }
+
+            & > span > i {
+                width: 71%;
+            }
         }
 
     }
@@ -219,8 +223,7 @@ main.restaurant {
 
 // Adaptative style for Pad
 @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
-
-    main.restaurant {
+    main.lyt-restaurant {
 
         & > div.restaurant-header {
 
@@ -234,6 +237,10 @@ main.restaurant {
 
             & > div.restaurant-header-content > div.restaurant-header-content-inner {
                 padding-top: 3%;
+
+                & > h1 {
+                    font-size: 2em;
+                }
             }
 
         }
@@ -296,7 +303,7 @@ main.restaurant {
 
 // Adaptative style for Desktop
 @media screen and (min-width: $desktop-min-width-br) {
-    main.restaurant {
+    main.lyt-restaurant {
         padding-bottom: 10%;
         justify-content: space-evenly;
 
@@ -360,6 +367,7 @@ main.restaurant {
             & > div.restaurant-menu__item {
 
                 & > div.restaurant-menu__item__info  > b {
+                    font-size: 0.9em;
                     @include text-overflow;
                 }
 
