@@ -4,7 +4,12 @@
   "description": "Projet 3 de la formation developpeur Web d'OCR. Ohmyfood!",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./public/css/style.min.css --style compressed"
+    "sass": "sass --watch ./scss/main.scss:./public/css/style.min.css --style compressed",
+    "release-sass":"sass ./scss/main.scss:./public/css/style.expanded.css --style expanded",
+    "release-prefix":"postcss ./public/css/style.expanded.css --use autoprefixer -d ./public/css/prefixed/",
+    "release-compress":"sass ./public/css/prefixed/style.expanded.css:./public/css/style.min.css --style compressed",
+    "release-cleanup":"del public\\css\\prefixed\\style.expanded.css && rmdir public\\css\\prefixed\\ && del public\\css\\style.expanded.*",
+    "release":"npm run release-sass && npm run release-prefix && npm run release-compress && npm run release-cleanup"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/moDevsome/mickaelouthier-ocr-p3/issues"
   },
-  "homepage": "https://modevsome.github.io/mickaelouthier-ocr-p3/"
+  "homepage": "https://modevsome.github.io/mickaelouthier-ocr-p3/",
+  "browserslist": "last 4 versions"
 }
