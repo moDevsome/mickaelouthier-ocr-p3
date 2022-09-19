@@ -37,6 +37,12 @@ footer {
 
 }
 
+@media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
+    footer > div.footer-inner > svg {
+        width: fit-content;
+    }
+}
+
 @media screen and (min-width: $desktop-min-width-br) {
 
     footer {

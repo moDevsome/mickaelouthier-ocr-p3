@@ -41,16 +41,21 @@ div#lyt-home-explore-block {
     div#lyt-home-explore-block {
         position: relative;
         width: 50%;
-        padding-top: 8%;
+        // padding-top: 8%;
+        padding-top: 6%;
+
+        background-color: #fbfbfb;
 
         %home-explore-block-position {
             position: relative;
             z-index: 3;
         }
 
+        /*
         & > div#home-explore-block__background {
             display: block;
         }
+        */
 
         & > .home-explore-block__h1 {
             @extend %home-explore-block-position;
@@ -70,6 +75,7 @@ div#lyt-home-explore-block {
             margin-right: 5%;
         }
 
+        /*
         & > div#home-explore-block__background {
             position: absolute;
             top: 0;
@@ -108,5 +114,6 @@ div#lyt-home-explore-block {
             }
 
         }
+        */
     }
 }

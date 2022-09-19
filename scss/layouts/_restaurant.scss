@@ -246,9 +246,12 @@ main.lyt-restaurant {
         }
 
         & > section {
-            margin: 0 auto 8% auto;
+            margin: 0 auto 6% auto;
+            display: flex;
+            flex-flow: row wrap;
 
             & > h3 {
+                width: 100%;
                 text-align: center;
 
                 &::after {
@@ -258,6 +261,11 @@ main.lyt-restaurant {
 
             }
 
+            & > div.restaurant-menu__item {
+                width: 48%;
+            }
+
+            /*
             & > div.restaurant-menu__item {
 
                 & > div.restaurant-menu__item__info {
@@ -289,6 +297,7 @@ main.lyt-restaurant {
                 }
 
             }
+            */
         }
 
         & > div#order-button-wrapper {
