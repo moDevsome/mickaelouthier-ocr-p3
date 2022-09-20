@@ -54,6 +54,7 @@ section#lyt-home-restaurants-section {
 
             & > a {
                 @include card-info-text;
+                width: 85%;
             }
 
         }
