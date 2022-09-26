@@ -17,6 +17,15 @@ div#lyt-home-explore-block {
         font-size: 1.8em;
         font-weight: 700;
 
+        // Issue #3
+        @media screen and (max-width: 280px) { // galaxy fold and other viewport under 280px
+            width: 95%;
+            font-size: 1.7em;
+        }
+        @media screen and (min-width: 390px) and (max-width: $pad-min-width-br) {
+            max-width: 338px;
+        }
+
         @media screen and (min-width: $pad-min-width-br) and (max-width: $pad-max-width-br) {
             margin: 0 auto 3.8% auto;
         }
