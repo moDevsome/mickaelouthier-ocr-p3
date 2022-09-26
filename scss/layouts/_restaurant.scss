@@ -119,6 +119,11 @@ main.lyt-restaurant {
 
                 transition: width $menu-item-check-transition-duration;
 
+                // Issue #5
+                & > b {
+                    @include text-overflow;
+                }
+
                 & > span {
                     display: flex;
                     flex-direction: row;
